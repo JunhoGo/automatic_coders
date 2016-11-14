@@ -1,0 +1,7 @@
+public class SeatInformation {
+int seatIndex;
+String destStation;
+SeatInformation(String destnation){
+this.destStation = destnation; 
+}
+}
