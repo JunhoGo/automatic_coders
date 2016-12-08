@@ -17,8 +17,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
-//글씨체 넣기 
-//각각 다 확인해보기
+
+
+//Show seat using GUI
 public class Show_seat extends JFrame {
 	public Show_seat() {
 	}
@@ -66,6 +67,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          setBounds(0, 0, 805, 505);
          getContentPane().setLayout(null);
          
+         //1 seat
          int seat1 = seat.get(0);
          System.out.println("안녕 나는 seat 1이야 "+seat1);
          ConvertToString ToString= new ConvertToString();
@@ -75,10 +77,11 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation.setFont(new Font("Rix비타민 M", Font.BOLD,19));
          getContentPane().add(a);
          a.append(str1);
-         System.out.println("자리에 나오는 첫번째 아이야 ^^ "+str1);
+         System.out.println("자리에 나오는 첫번째  "+str1);
          lblStation.setBounds(92, 105, 118, 57);
          getContentPane().add(lblStation);
          
+         //2 seat
          seat1 = seat.get(1);
          System.out.println("안녕 나는 seat 2이야 "+seat1);
          str1 = ToString.toString(seat1);
@@ -87,10 +90,11 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_1.setFont(new Font("Rix비타민 M", Font.BOLD,19));
          getContentPane().add(b);
          b.append(str1);
-         System.out.println("자리에 나오는 두번째 아이야 ^^ "+str1);
+         System.out.println("자리에 나오는 두번째 "+str1);
          lblStation_1.setBounds(239, 105, 141, 57);
          getContentPane().add(lblStation_1);
          
+         //3 seat
          seat1 = seat.get(2);
          str1 = ToString.toString(seat1);
          JLabel lblStation_2 = new JLabel(str1);
@@ -101,6 +105,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_2.setBounds(409, 105, 141, 57);
          getContentPane().add(lblStation_2);
         
+         //4 seat
          seat1 = seat.get(3);
          str1 = ToString.toString(seat1);
          JLabel lblStation_3 = new JLabel(str1);
@@ -111,6 +116,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_3.setBounds(574, 105, 118, 57);
          getContentPane().add(lblStation_3);
          
+         //5 seat
          seat1 = seat.get(4);
          str1 = ToString.toString(seat1);
          JLabel lblStation_4 = new JLabel(str1);
@@ -121,6 +127,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_4.setBounds(574, 328, 118, 57);
          getContentPane().add(lblStation_4);
          
+         //6 seat
          seat1 = seat.get(5);
          str1 = ToString.toString(seat1);
          JLabel lblStation_5 = new JLabel(str1);
@@ -131,6 +138,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_5.setBounds(402, 328, 148, 57);
          getContentPane().add(lblStation_5);
          
+         //7 seat
          seat1 = seat.get(6);
          str1 = ToString.toString(seat1);
          JLabel lblStation_6 = new JLabel(str1);
@@ -141,6 +149,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_6.setBounds(239, 328, 141, 62);
          getContentPane().add(lblStation_6);
          
+         //8 seat
          seat1 = seat.get(7);
          str1 = ToString.toString(seat1);
          JLabel lblStation_7 = new JLabel(str1);
@@ -151,6 +160,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_7.setBounds(92, 331, 124, 57);
          getContentPane().add(lblStation_7);
          
+         //show fast seat
          Integer i = fast;
          JLabel lblStation_8 = new JLabel(i.toString());
          JTextArea k = new JTextArea();
@@ -160,6 +170,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          lblStation_8.setBounds(92, 400, 124, 57);
          getContentPane().add(lblStation_8);
          
+         //show background
          JButton JButton_back = new JButton("");
          JButton_back.setLayout(null);
          JButton_back.setBounds(0,0, 789,450);
@@ -167,15 +178,13 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          getContentPane().add(JButton_back);
          getContentPane().setBounds(0,0,805,505);
          try {
-			//DealyMethod(10);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
          JButton_back.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	           //  setVisible(false);
+	            
 	           re(1);
 	          }
 	       });
@@ -187,8 +196,8 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-         //a.setVisible(true);
       }
+	
       private class SwingAction extends AbstractAction {
          public SwingAction() {
             putValue(NAME, "SwingAction");
@@ -197,6 +206,7 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          public void actionPerformed(ActionEvent e) {
          }
       }
+      
       private class SwingAction_1 extends AbstractAction {
          public SwingAction_1() {
             putValue(NAME, "SwingAction_1");
@@ -205,14 +215,19 @@ static ArrayList<Integer> i = new ArrayList<Integer>();
          public void actionPerformed(ActionEvent e) {
          }
       }
+      
       public void re(int hi)
       {
          finish=hi;
       }
+      
+      //Give to destination
       public int getDesination(){
             System.out.println(finish+"끝났나?");
             return finish;
        }
+      
+      //DealyMethod
       public static void DealyMethod(int delayTime) throws Exception{
 	      int mdelayTime;
 	      mdelayTime = delayTime * 1000;

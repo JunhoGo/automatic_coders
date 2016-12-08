@@ -10,6 +10,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+//Show the GUI if client enter the error information
 public class Wrong_information extends TCP_echo_client {
 
    private JPanel contentPane;
@@ -18,7 +19,6 @@ public class Wrong_information extends TCP_echo_client {
     * Launch the application.
     */
    public static void main(String[] args) {
-      System.out.println("¿©±â´Â main\n");
 
       EventQueue.invokeLater(new Runnable() {
          public void run() {

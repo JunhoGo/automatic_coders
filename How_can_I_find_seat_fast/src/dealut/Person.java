@@ -1,4 +1,6 @@
 package dealut;
+
+//Have each client information 
 public class Person {
    private int current_station;
    private int dest_station;

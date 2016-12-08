@@ -1,7 +1,4 @@
 package dealut;
-
-
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -31,26 +28,19 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-
-public class Enter_destination_station extends JFrame/* extends TCP_echo_client*/ {
+//They give GUI : for entering destination station 
+//also show location of running subway 
+public class Enter_destination_station extends JFrame{
     
    static int hi = 0;
    int destStation = 0;
-  // private final Action action = new SwingAction();
- //  private final Action action_1 = new SwingAction_1();
    static JFrame Jframe = null;
-   /**
-    * Launch the application.
-    */
+
    public static void main(String[] args) {
       EventQueue.invokeLater(new Runnable() {
          public void run() {
             try {
                Enter_destination_station frame = new Enter_destination_station("hi");
-            //  int hi =  frame.Enter_destination_station_GUI(2);
-               //!!!!!!!!!!!여기서 오류나여!!!! 
-               //frame.Jframe.setVisible(true);
-
             } catch (Exception e) {
                e.printStackTrace();
             }
@@ -63,9 +53,7 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
     */
    public Enter_destination_station(String currentStation) {
 
-	      //hello++;
 	     JFrame a = new JFrame();
-	     //int station = 0;
 	      a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	     a.setBounds(0, 0, 805, 505);
 	     a.getContentPane().setLayout(null);
@@ -76,15 +64,13 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      btnNewButton.setForeground(Color.WHITE);
 	      btnNewButton.setIcon(new ImageIcon("green.PNG"));
 	      btnNewButton.setBounds(90, 262, 34, 25);
-	      //btnNewButton.setBorderPainted(false);
 	      a.getContentPane().add(btnNewButton);
 	      btnNewButton.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
 	            hi = 1;
 	            System.out.println(hi);
-	            re(1);	            System.out.println("Complete");
+	            re(1);	           
+	            System.out.println("Complete");
 
 	          }
 	       });
@@ -96,9 +82,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button);
 	      button.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 2;	            System.out.println(hi);
+	             hi = 2;	          
+	             System.out.println(hi);
 	             re(2);
 	          }
 	       });
@@ -110,9 +95,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_1);
 	      button_1.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 3;	            System.out.println(hi);
+	             hi = 3;	           
+	             System.out.println(hi);
 	             re(3);
 	          }
 	       });
@@ -124,9 +108,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_2);
 	      button_2.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 4;	            System.out.println(hi);
+	             hi = 4;	           
+	             System.out.println(hi);
 	             re(4);
 	          }
 	       });
@@ -138,9 +121,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_3);
 	      button_3.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 5;	            System.out.println(hi);
+	             hi = 5;	           
+	             System.out.println(hi);
 	             re(5);
 	          }
 	       });
@@ -152,9 +134,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_4);
 	      button_4.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 6;	            System.out.println(hi);
+	             hi = 6;	            
+	             System.out.println(hi);
 	             re(6);
 	          }
 	       });
@@ -166,9 +147,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_5);
 	      button_5.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 7;	            System.out.println(hi);
+	             hi = 7;	            
+	             System.out.println(hi);
 	             re(7);
 	          }
 	       });
@@ -180,9 +160,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_6);
 	      button_6.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 8;	            System.out.println(hi);
+	             hi = 8;	            
+	             System.out.println(hi);
 	             re(8);
 	          }
 	       });
@@ -194,9 +173,8 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	      a.getContentPane().add(button_7);
 	      button_7.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
-	             //여기에 넣어 예지얌
-	             //setVisible(false);
-	             hi = 9;	            System.out.println(hi);
+	             hi = 9;	            
+	             System.out.println(hi);
 	             re(9);
 	          }
 	       });
@@ -247,20 +225,4 @@ public class Enter_destination_station extends JFrame/* extends TCP_echo_client*
 	       return destStation;
 	    }
   
-   /*private class SwingAction extends AbstractAction {
-      public SwingAction() {
-         putValue(NAME, "SwingAction");
-         putValue(SHORT_DESCRIPTION, "Some short description");
-      }
-      public void actionPerformed(ActionEvent e) {
-      }
-   }
-   private class SwingAction_1 extends AbstractAction {
-      public SwingAction_1() {
-         putValue(NAME, "SwingAction_1");
-         putValue(SHORT_DESCRIPTION, "Some short description");
-      }
-      public void actionPerformed(ActionEvent e) {
-      }
-   }*/
 }

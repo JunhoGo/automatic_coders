@@ -32,6 +32,10 @@ import javax.swing.JTextField;
 import javax.swing.Icon;
 import javax.swing.SwingConstants;
 import javax.swing.BoxLayout;
+
+//Go to destination station
+//Soon arrive 
+//So show GUI 
 public class Go_to_destination_station extends TCP_echo_client {
 
    private JPanel contentPane;

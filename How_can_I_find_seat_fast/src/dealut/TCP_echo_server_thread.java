@@ -21,6 +21,7 @@ Thread = Thread-0
 Exception =Connection reset
  */
 import java.awt.*;
+
 import java.awt.Button;
 import java.awt.Dialog;
 import java.awt.Label;
@@ -46,15 +47,15 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 import java.net.Socket;
 import java.net.ServerSocket;
+
+//SERVER
 public class TCP_echo_server_thread {
 	public static void main(String[] args) throws IOException{
 		ServerSocket servSock = new ServerSocket(6789);
-		//    ServerSocket servSock = new ServerSocket(6789);
 
 		System.out.println("Ready to server");
 	
 		Logger logger = new ConsoleLogger(); //Log messages to console
-		//Intro_loading intro_loading = new Intro_loading();
 		//Run forever, accepting and spawning threads to service each connection 
 		for(;;){//들어오는 요구를 반복적으로 처리함/ 포트에 의해 만들어지는 accept를 호출!
 				Socket ClntSock = servSock.accept(); 
@@ -63,11 +64,9 @@ public class TCP_echo_server_thread {
 				Echo_protocol protocol = new Echo_protocol(ClntSock, logger);
 				Thread thread = new Thread(protocol);
 				thread.start();
-				//subway subway_ = new subway();
 				logger.writeEntry("Created and started Thread = " + thread.getName());
 			
 		}
 		/*Not reached*/
 	}
 }
-//클라이언트당 쓰레드를 만들었는데 만약 안돼면 

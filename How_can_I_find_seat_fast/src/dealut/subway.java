@@ -7,11 +7,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+//Show moving subway
 public class subway extends JFrame{
    JLabel pic;
    Timer tm;
    // JFrame jFrame;
    int x=0;
+   
+   //put the images in the list
    String[] list= {
          "subway1.png",
             "subway2.png",
@@ -56,6 +59,8 @@ public class subway extends JFrame{
             "subway41.png"
 
    };
+   
+   //set the timer and play slide show
    synchronized void hi(){
       //super("Java slideshow");
       setLayout(null);
@@ -82,14 +87,10 @@ public class subway extends JFrame{
       getContentPane().setBackground(Color.decode("#bdb67b"));
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setVisible(true);
-      try {
-          DealyMethod(1);
-       } catch (Exception e1) {
-          // TODO Auto-generated catch block
-          e1.printStackTrace();
-       } 
+       
    }   
 
+   //set the images size
    public void SetImageSize(int i){
       ImageIcon icon= new ImageIcon(list[i]);
       Image img= icon.getImage();
@@ -100,12 +101,8 @@ public class subway extends JFrame{
 
    public static void main(String[] args){
 
-      new subway();
+     subway in =  new subway();
+     in.hi();
    }
-   public void DealyMethod(int delayTime) throws Exception{
-      int mdelayTime;
-      mdelayTime = delayTime * 1000;
-      Robot robot = new Robot();
-      robot.delay(mdelayTime);
-   }
+
 }

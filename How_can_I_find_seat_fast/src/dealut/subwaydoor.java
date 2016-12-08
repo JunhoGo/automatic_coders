@@ -6,11 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+//Show moving subway door
 public class subwaydoor extends JFrame{
    
    JLabel pic;
    Timer tm;
    int x=0;
+   
+   //put the image in the list
    String[] list= {
          "door1.png",
          "door2.png",
@@ -27,6 +30,7 @@ public class subwaydoor extends JFrame{
          
          
    };
+   //set timer and play slide show
    public subwaydoor(){
       super("Java slideshow");
       pic = new JLabel();
@@ -58,7 +62,7 @@ public class subwaydoor extends JFrame{
             
             
    
-   
+   //set the images size
    public void SetImageSize(int i){
       ImageIcon icon= new ImageIcon(list[i]);
       Image img= icon.getImage();

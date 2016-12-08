@@ -2,25 +2,25 @@ package dealut;
 import java.text.SimpleDateFormat;
 	import java.util.Calendar;
 
+	//confirm subway or not not
 	public class Subway_stop_or_not {
 
 	   public static int stop_or_not() {
 	      // TODO Auto-generated method stub
-		   System.out.println("여기에 들어오긴 해???");
 		   Calendar calendar = Calendar.getInstance();
 	       SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	       String s = dateFormat.format(calendar.getTime());
-	       System.out.println("나의 시간은 "+s);
 	      String mm = s.substring(14, 16);
 	       int new_mm = Integer.parseInt(mm);
 	      String ss=s.substring(17,19);
 	      int new_ss = Integer.parseInt(ss);
+	      
 	      int sum = (new_ss+(new_mm*60))%1200;
 	      
 	      if(sum>=0 && sum<=10)
 	         return 1;//stop
 	      else if(sum>10&&sum<=110)
-		         return 0;//가는 중
+		         return 0;//run
 	      else if(sum>110&&sum<=130)
 		         return 1;
 	      else if(sum>130&&sum<=230)

@@ -1,10 +1,9 @@
 package dealut;
-
+//That class change integer to string
 public class ConvertToString {
 	public String toString(int station){
 		switch(station){
 		case 1:
-			System.out.println("¿©±â¿À´Ö?");
 			return "¼±¸ª";
 		case 2:
 			return "ÇÑÆ¼";

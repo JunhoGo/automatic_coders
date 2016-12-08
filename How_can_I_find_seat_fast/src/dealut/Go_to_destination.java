@@ -42,7 +42,9 @@ import javax.swing.JTextField;
 import javax.swing.Icon;
 import javax.swing.SwingConstants;
 import javax.swing.BoxLayout;
-//원래 이름 _ ㅋㅋㅋㅋㅋ
+
+//Enter the station through take off station
+//Show moved subway and each station image 
 public class Go_to_destination extends JFrame{
    public int go_to_destination(int current,int dest) throws Exception{
       int i = 1;
@@ -68,14 +70,14 @@ public class Go_to_destination extends JFrame{
 
 
    while(current < dest){
-      System.out.println("current가 뭐죠? "+current+" dest가 뭐죠? "+dest);
       stop = Subway_stop_or_not.stop_or_not();
-      if(stop==1)//멈췄다면
+      //If subway is stop then 
+      if(stop==1)
       {
-         System.out.println("여기는 멈출 때 들어오는 곳이얌 ㅎ-ㅎ");
-         //해당하는 역의 이미지 보여줘 
+         
+         //Show that current station image 
          if(i==1){
-            next_station = station.find_current_station(1);//다음은!?
+            next_station = station.find_current_station(1);
             i =i+1;
          }
          subway_go.setVisible(false);      
@@ -85,20 +87,20 @@ public class Go_to_destination extends JFrame{
          next_station=next_station+1;
          current = current + 1;
       }
-      else if(stop==0) //가는 중이라면
+      
+      //If subway is running 
+      else if(stop==0) 
       { 
-         System.out.println("!!!!!!!!!!!!!!!!");
-         //while(check == 0){
-          //  check = 1;
+         
          subway subway_go1 = new subway();
             subway_go1.hi();           
             DealyMethod(11);
 
-             System.out.println("체크가 언제 바뀌는 가?");
-         //}
-         System.out.println("나는 가는 중입니다");
+            
       }
-      else{//-1이면
+      
+      //If station is comming in the destination station 
+      else{
           System.out.println("거의 다 도착했다면");
          return -1;
          }
@@ -107,6 +109,7 @@ public class Go_to_destination extends JFrame{
    return -1;
   }
    
+   //DealyMethod
    public void DealyMethod(int delayTime) throws Exception{
       int mdelayTime;
       mdelayTime = delayTime * 1000;
